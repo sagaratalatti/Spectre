@@ -6,4 +6,13 @@
     <color name="colorBackgroundMain">#FFFFFF</color>
     <color name="colorWidgetBackground">#F4F4F4</color>
     <color name="colorError">#F44336</color>
+
+    <color name="white">@android:color/white</color>
+    <color name="black_transparent">#14000000</color>
+    <color name="active_indicator">@android:color/white</color>
+    <color name="inactive_indicator">#4D000000</color>
+
+    <color name="iris_purple">#6a5acd</color>
+    <color name="dark_purple">#551a8b</color>
+    <color name="northwestern_purple">#5B3B8C</color>
 </resources>

@@ -3,8 +3,8 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/catamaran</item>
         <item>@font/catamaran_bold</item>
-        <item>@font/catamaran_extralight</item>
         <item>@font/catamaran_medium</item>
-        <item>@font/catamaran_thin</item>
+        <item>@font/catamaran_light</item>
+        <item>@font/catamaran_semibold</item>
     </array>
 </resources>
