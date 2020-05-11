@@ -1,6 +1,7 @@
 package com.sagar.spectre.login.fragments;
 
 import android.Manifest;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -39,15 +40,22 @@ public abstract class PermissionFragment extends Fragment {
         TextView permissionDescription = view.findViewById(R.id.permission_description);
         MaterialButton permissionRequestBtn = view.findViewById(R.id.request_permissionBtn);
 
-        //permissionLayout.setBackgroundColor(getBackgroundColor());
+        permissionLayout.setBackgroundResource(getBackgroundColor());
+        permissionLogo.setBackgroundResource(getBackgroundColor());
         permissionLogo.setImageDrawable(getContext().getDrawable(getPermissionLogo()));
         permissionLogo.setContentDescription(getPermissionDescription());
         permissionDescription.setText(getPermissionDescription());
+        permissionDescription.setBackgroundResource(getBackgroundColor());
 
         permissionRequestBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                requestPermission(getPermission());
+                if(getPermission() != null) {
+                    requestPermission(getPermission());
+                } else {
+                    requestPermissions(getPermissionRequest1(), getPermissionRequest2());
+                }
+
             }
         });
     }
@@ -66,13 +74,17 @@ public abstract class PermissionFragment extends Fragment {
 
     protected abstract String getPermissionDescription();
 
+    protected abstract String getPermissionRequest1();
+
+    protected abstract String getPermissionRequest2();
+
     private void requestPermission(String permission) {
         Log.i(getFragmentTag(), "CAMERA permission has NOT been granted. Requesting permission.");
         if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), permission)) {
             // Provide an additional rationale to the user if the permission was not granted
             // and the user would benefit from additional context for the use of the permission.
             // For example if the user has previously denied the permission.
-            Log.i(getFragmentTag(), "Displaying camera permission rationale to provide additional context.");
+            Log.i(getFragmentTag(), "Displaying " + permission + " permission rationale to provide additional context.");
                             ActivityCompat.requestPermissions(getActivity(),
                                     new String[]{permission},
                                     getRequestPermission());
@@ -82,6 +94,28 @@ public abstract class PermissionFragment extends Fragment {
                     getRequestPermission());
         }
         // Permission not granted.
+    }
+
+    private void requestPermissions(String permission1, String permission2) {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),
+                permission1)
+                || ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),
+                permission2)) {
+
+            // Provide an additional rationale to the user if the permission was not granted
+            // and the user would benefit from additional context for the use of the permission.
+            // For example, if the request has been denied previously.
+            Log.i(getFragmentTag(),
+                    "Displaying " + permission1 + "&" +  permission2 + " permission rationale to provide additional context.");
+
+            // Display a SnackBar with an explanation and a button to trigger the request.
+                            ActivityCompat
+                                    .requestPermissions(getActivity(), getPermissions(),
+                                            getRequestPermission());
+        } else {
+            // Contact permissions have not been granted yet. Request them directly.
+            ActivityCompat.requestPermissions(getActivity(), getPermissions(), getRequestPermission());
+        }
     }
 
 }

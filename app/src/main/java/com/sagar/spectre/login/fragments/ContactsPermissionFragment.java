@@ -1,18 +1,16 @@
 package com.sagar.spectre.login.fragments;
 
 import android.Manifest;
-import android.graphics.drawable.Drawable;
 
 import com.sagar.spectre.R;
 
-public class LocationPermissionFragment extends PermissionFragment {
+public class ContactsPermissionFragment extends PermissionFragment {
 
-    public LocationPermissionFragment() {
-    }
+    public ContactsPermissionFragment() {}
 
     @Override
     protected int getRequestPermission() {
-        return 1;
+        return 3;
     }
 
     @Override
@@ -22,27 +20,27 @@ public class LocationPermissionFragment extends PermissionFragment {
 
     @Override
     protected String getFragmentTag() {
-        return LocationPermissionFragment.class.getSimpleName();
+        return ContactsPermissionFragment.class.getSimpleName();
     }
 
     @Override
     protected int getPermissionLogo() {
-        return R.drawable.ic_street_map;
+        return R.drawable.ic_people;
     }
 
     @Override
     protected int getBackgroundColor() {
-        return R.color.iris_purple;
+        return R.color.northwestern_purple;
     }
 
     @Override
     protected String getPermission() {
-        return Manifest.permission.ACCESS_FINE_LOCATION;
+        return Manifest.permission.READ_CONTACTS;
     }
 
     @Override
     protected String getPermissionDescription() {
-        return "Allow Spectre to access your location, Spectre collects your location data to provide with content based on your geolocation. Your location measured in distance could be shared with the users on this platform. ";
+        return "Allow Spectre to access your contacts, Spectre will use your contacts directory to find your contacts on Spectre database to allow anonymous interaction with your phone contacts.";
     }
 
     @Override

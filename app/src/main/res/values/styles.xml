@@ -6,7 +6,21 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:background">@color/colorBackgroundMain</item>
+        <item name="fontFamily">@font/catamaran</item>
+        <item name="snackbarStyle">@style/Spectre.Snackbar</item>
+        <item name="snackbarButtonStyle">@style/Spectre.Snackbar.Button</item>
+    </style>
+
+    <style name="Spectre.Snackbar" parent="@style/Widget.MaterialComponents.Snackbar">
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="cardCornerRadius">10dp</item>
+    </style>
+
+    <style name="Spectre.Snackbar.Button" parent="@style/Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="strokeColor">@color/colorAccent</item>
     </style>
 
 </resources>

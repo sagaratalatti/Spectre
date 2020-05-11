@@ -5,4 +5,14 @@
     <string name="title_notifications">Notifications</string>
     <string name="next">Next</string>
     <string name="accept">Accept</string>
+    <string name="allow_permission">Allow Permission</string>
+
+    <string name="permission_location_granted">Spectre has access to location &#128515;</string>
+    <string name="permission_location_denied">Location permission denied &#128528;</string>
+    <string name="permission_storage_granted">Spectre has access to storage &#128515;</string>
+    <string name="permission_storage_denied">Storage permission denied &#128528;</string>
+    <string name="permission_contacts_granted">Spectre has access to contacts &#128515;</string>
+    <string name="permission_contacts_denied">Contacts permission denied &#128528;</string>
+    <string name="set_display_name">Set Display Name</string>
+    <string name="display_name">Display Name</string>
 </resources>
