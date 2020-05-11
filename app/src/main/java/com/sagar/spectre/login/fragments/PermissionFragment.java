@@ -41,11 +41,8 @@ public abstract class PermissionFragment extends Fragment {
         MaterialButton permissionRequestBtn = view.findViewById(R.id.request_permissionBtn);
 
         permissionLayout.setBackgroundResource(getBackgroundColor());
-        permissionLogo.setBackgroundResource(getBackgroundColor());
         permissionLogo.setImageDrawable(getContext().getDrawable(getPermissionLogo()));
-        permissionLogo.setContentDescription(getPermissionDescription());
         permissionDescription.setText(getPermissionDescription());
-        permissionDescription.setBackgroundResource(getBackgroundColor());
 
         permissionRequestBtn.setOnClickListener(new View.OnClickListener() {
             @Override

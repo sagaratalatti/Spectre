@@ -23,4 +23,12 @@
         <item name="strokeColor">@color/colorAccent</item>
     </style>
 
+    <style name="Spectre.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="helperTextTextColor">@color/colorAccent</item>
+        <item name="boxStrokeColor">@color/box_input_state_list</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="android:state_focused">true</item>
+        <item name="errorEnabled">true</item>
+    </style>
+
 </resources>

@@ -1,7 +1,6 @@
 package com.sagar.spectre.utils;
 
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 

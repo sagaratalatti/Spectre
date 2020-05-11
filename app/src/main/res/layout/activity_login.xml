@@ -15,10 +15,12 @@
         android:id="@+id/login_fbNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:backgroundTint="@color/colorAccent"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:text="@string/next"
-        android:fontFamily="@font/catamaran_medium"
+        android:textStyle="bold"
+        android:fontFamily="@font/catamaran_bold"
         app:icon="@drawable/ic_arrow_forward_white_24dp"
         style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"/>
 
