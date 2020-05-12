@@ -30,8 +30,7 @@
             android:textSize="22sp"
             android:textAlignment="center"
             android:cursorVisible="false"
-            android:textColorHint="@color/colorAccent"
-            android:text="@string/spectre" />
+            android:textColorHint="@color/colorAccent" />
 
     </com.google.android.material.textfield.TextInputLayout>
 

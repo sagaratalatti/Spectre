@@ -29,14 +29,5 @@ public class NameFragment extends Fragment {
 
         final TextInputEditText username = view.findViewById(R.id.login_username);
         TextInputLayout usernameInputLayout = view.findViewById(R.id.usernameInputLayout);
-
-        usernameInputLayout.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus) {
-                    username.setText("");
-                }
-            }
-        });
     }
 }

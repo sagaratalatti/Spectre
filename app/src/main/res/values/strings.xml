@@ -16,4 +16,7 @@
     <string name="set_display_name">Set Display Name</string>
     <string name="display_name">Display Name</string>
     <string name="spectre">Spectre</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
 </resources>

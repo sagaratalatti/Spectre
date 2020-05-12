@@ -24,11 +24,21 @@
     </style>
 
     <style name="Spectre.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextColor">@color/colorAccent</item>
         <item name="helperTextTextColor">@color/colorAccent</item>
         <item name="boxStrokeColor">@color/box_input_state_list</item>
         <item name="boxStrokeWidth">2dp</item>
         <item name="android:state_focused">true</item>
         <item name="errorEnabled">true</item>
+    </style>
+
+    <style name="Spectre.Button.OutlinedBox" parent="Widget.MaterialComponents.Button.OutlinedButton.Icon">
+        <item name="backgroundTint">@color/outlined_btn_state_list</item>
+        <item name="iconPadding">5dp</item>
+        <item name="iconTint">@color/outlined_btn_icon_list</item>
+        <item name="strokeColor">@color/colorAccent</item>
+        <item name="android:textColor">@color/outlined_btn_txt_list</item>
+        <item name="elevation">2dp</item>
     </style>
 
 </resources>

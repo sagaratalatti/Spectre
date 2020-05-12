@@ -19,6 +19,7 @@ import com.google.android.material.floatingactionbutton.ExtendedFloatingActionBu
 import com.google.android.material.snackbar.Snackbar;
 import com.sagar.spectre.R;
 import com.sagar.spectre.login.fragments.ContactsPermissionFragment;
+import com.sagar.spectre.login.fragments.GenderFragment;
 import com.sagar.spectre.login.fragments.LocationPermissionFragment;
 import com.sagar.spectre.login.fragments.NameFragment;
 import com.sagar.spectre.login.fragments.StoragePermissionFragment;
@@ -50,6 +51,7 @@ public class LoginActivity extends FragmentActivity implements ActivityCompat.On
         mPagerAdapter = new ViewPagerFragmentAdapter(this);
 
         mPagerAdapter.addFragment(new NameFragment());
+        mPagerAdapter.addFragment(new GenderFragment());
         mPagerAdapter.addFragment(new LocationPermissionFragment());
         mPagerAdapter.addFragment(new StoragePermissionFragment());
         mPagerAdapter.addFragment(new ContactsPermissionFragment());
