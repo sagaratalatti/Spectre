@@ -37,8 +37,35 @@
         <item name="iconPadding">5dp</item>
         <item name="iconTint">@color/outlined_btn_icon_list</item>
         <item name="strokeColor">@color/colorAccent</item>
+        <item name="fontFamily">@font/catamaran_bold</item>
         <item name="android:textColor">@color/outlined_btn_txt_list</item>
         <item name="elevation">2dp</item>
+        <item name="errorEnabled">true</item>
+        <item name="errorIconDrawable">@drawable/ic_error_red_24dp</item>
+        <item name="errorTextColor">@color/colorError</item>
+    </style>
+
+    <style name="Spectre.Chips.Choice" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="fontFamily">@font/catamaran_bold</item>
+        <item name="chipCornerRadius">10dp</item>
+        <item name="chipStrokeColor">@color/colorAccent</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="chipSurfaceColor">@color/iris_purple</item>
+        <item name="chipBackgroundColor">@color/outlined_btn_state_list</item>
+        <item name="android:textColor">@color/outlined_btn_txt_list</item>
+        <item name="chipIconTint">@color/box_input_state_list</item>
+        <item name="rippleColor">@color/iris_purple</item>
+        <item name="checkedIcon">@drawable/ic_check_white_24dp</item>
+        <item name="android:checkable">true</item>
+        <item name="chipStartPadding">10dp</item>
+        <item name="chipEndPadding">10dp</item>
+    </style>
+
+    <style name="Spectre.Login.Headings" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/catamaran_bold</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">25sp</item>
     </style>
 
 </resources>

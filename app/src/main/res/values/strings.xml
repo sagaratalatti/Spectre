@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Spectre</string>
+    <string name="app_name">Boo</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -19,4 +19,16 @@
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="other">Other</string>
+    <string name="_15_17">15–17</string>
+    <string name="_18_20">18–20</string>
+    <string name="_21_25">21–25</string>
+    <string name="_26_29">26–29</string>
+    <string name="_30_35">30–35</string>
+    <string name="_36_44">36–44</string>
+    <string name="_45">45+</string>
+    <string name="cannot_use_boo">Cannot use Boo as username</string>
+    <string name="username_not_blank">Username cannot be blank</string>
+    <string name="choose_gender">Choose Gender</string>
+    <string name="choose_age">Choose Age</string>
+    <string name="skip">Skip</string>
 </resources>

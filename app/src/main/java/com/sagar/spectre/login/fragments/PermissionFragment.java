@@ -1,7 +1,6 @@
 package com.sagar.spectre.login.fragments;
 
-import android.Manifest;
-import android.graphics.Color;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,13 +17,18 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.button.MaterialButton;
 import com.sagar.spectre.R;
+import com.sagar.spectre.login.utils.LoginCallbackHandler;
 
 public abstract class PermissionFragment extends Fragment {
 
-    private static final int REQUEST_CAMERA = 0;
-    private static String[] PERMISSIONS_CONTACT = {Manifest.permission.READ_CONTACTS,
-            Manifest.permission.WRITE_CONTACTS};
+    private LoginCallbackHandler mHandler;
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        if (getActivity() instanceof LoginCallbackHandler)
+            mHandler = (LoginCallbackHandler) getActivity();
+    }
 
     @Nullable
     @Override
@@ -39,6 +43,8 @@ public abstract class PermissionFragment extends Fragment {
         ImageView permissionLogo = view.findViewById(R.id.permission_ImageView);
         TextView permissionDescription = view.findViewById(R.id.permission_description);
         MaterialButton permissionRequestBtn = view.findViewById(R.id.request_permissionBtn);
+
+        mHandler.onPermission();
 
         permissionLayout.setBackgroundResource(getBackgroundColor());
         permissionLogo.setImageDrawable(getContext().getDrawable(getPermissionLogo()));
@@ -99,12 +105,8 @@ public abstract class PermissionFragment extends Fragment {
                 || ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),
                 permission2)) {
 
-            // Provide an additional rationale to the user if the permission was not granted
-            // and the user would benefit from additional context for the use of the permission.
-            // For example, if the request has been denied previously.
             Log.i(getFragmentTag(),
                     "Displaying " + permission1 + "&" +  permission2 + " permission rationale to provide additional context.");
-
             // Display a SnackBar with an explanation and a button to trigger the request.
                             ActivityCompat
                                     .requestPermissions(getActivity(), getPermissions(),

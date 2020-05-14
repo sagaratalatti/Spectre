@@ -7,7 +7,7 @@ import androidx.core.content.ContextCompat;
 import com.google.android.material.snackbar.Snackbar;
 import com.sagar.spectre.R;
 
-public class MainUtils {
+public class AppUtils {
 
     public static void showSnackbar(ViewGroup parent, String message, int duration) {
         Snackbar snackbar = Snackbar.make(parent, message, duration);

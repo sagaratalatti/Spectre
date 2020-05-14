@@ -2,13 +2,16 @@ package com.sagar.spectre.login.fragments;
 
 import android.Manifest;
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+
+import androidx.annotation.Nullable;
 
 import com.sagar.spectre.R;
+import com.sagar.spectre.login.utils.LoginCallbackHandler;
 
 public class LocationPermissionFragment extends PermissionFragment {
 
-    public LocationPermissionFragment() {
-    }
+    public LocationPermissionFragment() {}
 
     @Override
     protected int getRequestPermission() {

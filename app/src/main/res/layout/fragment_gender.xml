@@ -6,11 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/Spectre.Login.Headings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_gender"
+        app:layout_constraintBottom_toTopOf="@+id/genderToggleButton"
+        app:layout_constraintEnd_toEndOf="@+id/genderToggleButton"
+        app:layout_constraintStart_toStartOf="@+id/genderToggleButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.button.MaterialButtonToggleGroup
         android:id="@+id/genderToggleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:singleSelection="true"
+        android:layoutDirection="locale"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

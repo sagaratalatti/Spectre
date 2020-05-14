@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_age"
+        style="@style/Spectre.Login.Headings"
+        app:layout_constraintBottom_toTopOf="@+id/ageChipGroup"
+        app:layout_constraintEnd_toEndOf="@+id/ageChipGroup"
+        app:layout_constraintStart_toStartOf="@+id/ageChipGroup"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/ageChipGroup"
+        android:layout_width="304dp"
+        android:layout_height="91dp"
+        android:layout_gravity="center"
+        android:layoutDirection="locale"
+        android:maxWidth="150dp"
+        app:chipSpacingHorizontal="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            style="@style/Spectre.Chips.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_18_20" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Spectre.Chips.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_21_25" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Spectre.Chips.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_26_29" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Spectre.Chips.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_30_35" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Spectre.Chips.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_36_44" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Spectre.Chips.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_45" />
+    </com.google.android.material.chip.ChipGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,7 +28,6 @@
             android:fontFamily="@font/catamaran_bold"
             android:textColor="@color/colorAccent"
             android:textSize="22sp"
-            android:textAlignment="center"
             android:cursorVisible="false"
             android:textColorHint="@color/colorAccent" />
 

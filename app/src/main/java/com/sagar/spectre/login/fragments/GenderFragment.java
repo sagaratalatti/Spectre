@@ -13,10 +13,20 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.button.MaterialButtonToggleGroup;
 import com.sagar.spectre.R;
+import com.sagar.spectre.login.utils.LoginCallbackHandler;
 
 public class GenderFragment extends Fragment {
 
     public GenderFragment() {}
+
+    private LoginCallbackHandler mHandler;
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        if (getActivity() instanceof LoginCallbackHandler)
+            mHandler = (LoginCallbackHandler) getActivity();
+    }
 
     @Nullable
     @Override
@@ -35,7 +45,8 @@ public class GenderFragment extends Fragment {
             public void onButtonChecked(MaterialButtonToggleGroup group, int checkedId, boolean isChecked) {
                 if (isChecked) {
                     MaterialButton genderButton = group.findViewById(checkedId);
-                    Toast.makeText(getActivity(), genderButton.getText().toString(), Toast.LENGTH_SHORT).show();
+                    String gender = genderButton.getText().toString();
+                    mHandler.onSaveGender(2, gender);
                 }
             }
         });
